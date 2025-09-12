@@ -10,7 +10,7 @@ class TimeStampedModel(models.Model):
 class Program(TimeStampedModel):
     name = models.CharField(max_length=200, unique=True)
     description = models.TextField(blank=True)
-    national_alignment = models.CharField(max_length=255, blank=True)  # NDPIII, Roadmap, 4IR
+    national_alignment = models.CharField(max_length=255, blank=True)
     focus_areas = models.CharField(max_length=255, blank=True)         # e.g., "IoT, automation"
     phases = models.CharField(max_length=255, blank=True)              # e.g., "Cross-Skilling,..."
 
