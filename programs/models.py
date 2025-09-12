@@ -8,7 +8,6 @@ class TimeStampedModel(models.Model):
         abstract = True
 
 class Program(TimeStampedModel):
-    # 1.1.1 Program fields (simplified but aligned to spec) :contentReference[oaicite:1]{index=1}
     name = models.CharField(max_length=200, unique=True)
     description = models.TextField(blank=True)
     national_alignment = models.CharField(max_length=255, blank=True)  # NDPIII, Roadmap, 4IR
