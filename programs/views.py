@@ -28,7 +28,6 @@ class ProgramViewSet(viewsets.ModelViewSet):
             serializer = ProjectSerializer(page, many=True) if page is not None else ProjectSerializer(qs, many=True)
             return self.get_paginated_response(serializer.data) if page is not None else Response(serializer.data)
 
-        # POST -> create a project under this program
         data = request.data.copy()
         data["program"] = program.id
         serializer = ProjectSerializer(data=data)
@@ -56,7 +55,6 @@ class ProjectViewSet(viewsets.ModelViewSet):
             serializer = OutcomeSerializer(page, many=True) if page is not None else OutcomeSerializer(qs, many=True)
             return self.get_paginated_response(serializer.data) if page is not None else Response(serializer.data)
 
-        # POST -> create outcome under this project
         data = request.data.copy()
         data["project"] = project.id
         serializer = OutcomeSerializer(data=data)
