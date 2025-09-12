@@ -1,6 +1,5 @@
 # config/settings.py (add or confirm)
 INSTALLED_APPS = [
-    # ...
     "rest_framework",
     "apps.capstone",
 ]
