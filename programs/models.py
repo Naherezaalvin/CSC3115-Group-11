@@ -11,7 +11,7 @@ class Program(TimeStampedModel):
     name = models.CharField(max_length=200, unique=True)
     description = models.TextField(blank=True)
     national_alignment = models.CharField(max_length=255, blank=True)
-    focus_areas = models.CharField(max_length=255, blank=True)         # e.g., "IoT, automation"
+    focus_areas = models.CharField(max_length=255, blank=True)
     phases = models.CharField(max_length=255, blank=True)              # e.g., "Cross-Skilling,..."
 
     def __str__(self):
