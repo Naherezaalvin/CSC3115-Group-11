@@ -12,7 +12,7 @@ class Program(TimeStampedModel):
     description = models.TextField(blank=True)
     national_alignment = models.CharField(max_length=255, blank=True)
     focus_areas = models.CharField(max_length=255, blank=True)
-    phases = models.CharField(max_length=255, blank=True)              # e.g., "Cross-Skilling,..."
+    phases = models.CharField(max_length=255, blank=True)
 
     def __str__(self):
         return self.name
