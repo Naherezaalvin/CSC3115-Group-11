@@ -1,6 +1,6 @@
 from django.db import models
 from core.models import TimeStampedModel
-from program.models import Program
+from programs.models import Program
 from facilities.models import Facility
 
 class Project(TimeStampedModel):
