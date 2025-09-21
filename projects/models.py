@@ -5,7 +5,7 @@ from facilities.models import Facility
 
 class Project(TimeStampedModel):
     program = models.ForeignKey(Program, related_name="projects", on_delete=models.CASCADE)
-    facility = models.ForeignKey(Facility, related_name="projects", on_delete=models.CASCADE)
+    facility = models.ForeignKey(Facility, related_name="projects", on_delete=models.PROTECT)
     title = models.CharField(max_length=255)
     nature_of_project = models.CharField(max_length=100, choices=[
         ("research", "Research"),
