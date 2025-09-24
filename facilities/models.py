@@ -105,5 +105,13 @@ class Equipment(TimeStampedModel):
         ]
     )
 
+    class Meta:
+        constraints = [
+            models.CheckConstraint(
+                check=~(models.Q(usage_domain='electronics') & models.Q(support_phase='training')),
+                name='electronics_not_for_training'
+            ),
+        ]
+
     def __str__(self):
         return f"{self.name} - {self.facility.name}"
